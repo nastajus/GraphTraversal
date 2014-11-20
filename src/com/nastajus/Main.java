@@ -19,22 +19,37 @@ public class Main {
     public static Node BFS(char target){
         Node a = Node.Get('A');
         q.add(a);
+
+        search:
         while (q.size() > 0 ){
-            Node cur = q.remove();
-            v.add(cur);
+
             //Node cur = q.poll();
+            Node cur = q.remove();
+            System.out.println("cur: " + cur.id);
+            v.add(cur);
+            System.out.println("v: " + cur.id);
+
+            System.out.print("Q: {");
+            for( Node m : q ){
+                System.out.print(m.id + ", ");
+            }
+            System.out.println("}");
+
             for ( Node n : cur.neighbours ){
                 if ( q.contains(target) ){
-                    break;
+                    System.out.println("break occurred");
+                    break search;
                 }
                 if ( cur.id == target ) {
+                    System.out.println("matches: " + cur.id);
                     return n;
                 }
                 else {
-                    v.add(n);
+                    System.out.println("q: " + n.id);
                     q.add(n);
                 }
             }
         }
+        return null;
     }
 }
