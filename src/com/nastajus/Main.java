@@ -24,6 +24,9 @@ public class Main {
             v.add(cur);
             //Node cur = q.poll();
             for ( Node n : cur.neighbours ){
+                if ( q.contains(target) ){
+                    break;
+                }
                 if ( cur.id == target ) {
                     return n;
                 }
@@ -33,6 +36,5 @@ public class Main {
                 }
             }
         }
-        return null;
     }
 }
