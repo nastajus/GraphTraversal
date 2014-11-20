@@ -20,7 +20,7 @@ public class Main {
         Node a = Node.Get('A');
         q.add(a);
 
-        search:
+//        search:
         while (q.size() > 0 ){
 
             //Node cur = q.poll();
@@ -33,18 +33,18 @@ public class Main {
             for( Node m : q ){
                 System.out.print(m.id + ", ");
             }
-            System.out.println("}");
+            System.out.println("} @ " + q.size());
 
             for ( Node n : cur.neighbours ){
-                if ( q.contains(target) ){
-                    System.out.println("break occurred");
-                    break search;
-                }
+//                if ( q.contains(n) ){
+//                    System.out.println("break occurred");
+//                    break search;
+//                }
                 if ( cur.id == target ) {
                     System.out.println("matches: " + cur.id);
                     return n;
                 }
-                else if (!q.contains(n)) {
+                else if (!q.contains(n) && !v.contains(n)) {
                     System.out.println("q: " + n.id);
                     q.add(n);
                 }
