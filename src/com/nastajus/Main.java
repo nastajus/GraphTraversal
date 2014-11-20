@@ -44,7 +44,7 @@ public class Main {
                     System.out.println("matches: " + cur.id);
                     return n;
                 }
-                else {
+                else if (!q.contains(n)) {
                     System.out.println("q: " + n.id);
                     q.add(n);
                 }
