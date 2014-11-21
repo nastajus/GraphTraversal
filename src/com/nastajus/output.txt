@@ -1,16 +1,22 @@
+Q: {A, } @ 1
 Q: {} @ 0
 Q: {J, H, E, D, } @ 4
 Q: {H, E, D, } @ 3
 Q: {E, D, M, K, } @ 4
-Q: {D, M, K, L, G, } @ 5
-Q: {M, K, L, G, F, } @ 5
-Q: {K, L, G, F, C, } @ 5
-Q: {L, G, F, C, N, } @ 5
-Q: {G, F, C, N, I, } @ 5
-Q: {F, C, N, I, } @ 4
-Q: {C, N, I, O, } @ 4
-Q: {N, I, O, P, } @ 4
-Q: {I, O, P, Q, } @ 4
-Q: {O, P, Q, } @ 3
-Q: {P, Q, } @ 2
+Q: {D, M, K, L, G, K, } @ 6
+Q: {M, K, L, G, K, G, D, F, } @ 8
+Q: {K, L, G, K, G, D, F, C, } @ 8
+Q: {L, G, K, G, D, F, C, K, N, } @ 9
+Q: {G, K, G, D, F, C, K, N, I, } @ 9
+Q: {K, G, D, F, C, K, N, I, } @ 8
+Q: {G, D, F, C, K, N, I, O, } @ 8
+Q: {D, F, C, K, N, I, O, I, } @ 8
+Q: {F, C, K, N, I, O, I, O, } @ 8
+Q: {C, K, N, I, O, I, O, C, } @ 8
+Q: {K, N, I, O, I, O, C, P, } @ 8
+Q: {N, I, O, I, O, C, P, Q, } @ 8
+Q: {I, O, I, O, C, P, Q, I, } @ 8
+Q: {O, I, O, C, P, Q, I, } @ 7
+Q: {I, O, C, P, Q, I, } @ 6
 matches: O
+n_count: 51, n = 18
