@@ -17,37 +17,48 @@ public class Main {
 
     }
 
+    /**
+     * n == current_neighbour.
+     * @return current node when match occurs.
+     */
     public static Node BFS(char start, char target){
+        int n_count = 0;
         Node a = Node.Get(start);
         q.add(a);
+        print_Queue();
 
         while (q.size() > 0 ){
 
             //Node cur = q.poll();
             Node cur = q.remove();
-            System.out.println("cur: " + cur.id);
+//            System.out.println("cur: " + cur.id);
             v.add(cur);
-            System.out.println("v: " + cur.id);
+//            System.out.println("v: " + cur.id);
 
-            System.out.print("Q: {");
-            for( Node m : q ){
-                System.out.print(m.id + ", ");
-            }
-            System.out.println("} @ " + q.size());
+            print_Queue();
 
             if ( cur.id == target ) {
                 System.out.println("matches: " + cur.id);
+                System.out.println("n_count: " + n_count + ", n = 18");
                 return cur;
             }
 
-
             for ( Node n : cur.neighbours ){
+                n_count += 1;
                 if (!q.contains(n) && !v.contains(n)) {
-                        System.out.println("q: " + n.id);
+//                    System.out.println("q: " + n.id);
                     q.add(n);
                 }
             }
         }
         return null;
+    }
+
+    public static void print_Queue(){
+        System.out.print("Q: {");
+        for( Node m : q ){
+            System.out.print(m.id + ", ");
+        }
+        System.out.println("} @ " + q.size());
     }
 }

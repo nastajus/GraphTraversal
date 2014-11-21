@@ -1,62 +1,16 @@
-cur: A
-v: A
 Q: {} @ 0
-q: B
-q: J
-q: H
-q: E
-q: D
-cur: B
-v: B
 Q: {J, H, E, D, } @ 4
-cur: J
-v: J
 Q: {H, E, D, } @ 3
-q: M
-q: K
-cur: H
-v: H
 Q: {E, D, M, K, } @ 4
-q: L
-q: G
-cur: E
-v: E
 Q: {D, M, K, L, G, } @ 5
-q: F
-cur: D
-v: D
 Q: {M, K, L, G, F, } @ 5
-q: C
-cur: M
-v: M
 Q: {K, L, G, F, C, } @ 5
-q: N
-cur: K
-v: K
 Q: {L, G, F, C, N, } @ 5
-q: I
-cur: L
-v: L
 Q: {G, F, C, N, I, } @ 5
-cur: G
-v: G
 Q: {F, C, N, I, } @ 4
-q: O
-cur: F
-v: F
 Q: {C, N, I, O, } @ 4
-q: P
-cur: C
-v: C
 Q: {N, I, O, P, } @ 4
-q: Q
-cur: N
-v: N
 Q: {I, O, P, Q, } @ 4
-cur: I
-v: I
 Q: {O, P, Q, } @ 3
-cur: O
-v: O
 Q: {P, Q, } @ 2
 matches: O
