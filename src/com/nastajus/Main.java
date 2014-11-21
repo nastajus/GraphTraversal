@@ -45,7 +45,7 @@ public class Main {
 
             for ( Node n : cur.neighbours ){
                 n_count += 1;
-                if (!v.contains(n)) {
+                if (!q.contains(n) && !v.contains(n)) {
 //                    System.out.println("q: " + n.id);
                     q.add(n);
                 }
