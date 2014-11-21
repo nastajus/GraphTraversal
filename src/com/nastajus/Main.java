@@ -11,16 +11,16 @@ public class Main {
     public static void main(String[] args) {
 
         // write your code here
+        char start = 'A';
         char target = 'O';
-        BFS(target);
+        BFS(start, target);
 
     }
 
-    public static Node BFS(char target){
-        Node a = Node.Get('A');
+    public static Node BFS(char start, char target){
+        Node a = Node.Get(start);
         q.add(a);
 
-//        search:
         while (q.size() > 0 ){
 
             //Node cur = q.poll();
@@ -35,17 +35,15 @@ public class Main {
             }
             System.out.println("} @ " + q.size());
 
+            if ( cur.id == target ) {
+                System.out.println("matches: " + cur.id);
+                return cur;
+            }
+
+
             for ( Node n : cur.neighbours ){
-//                if ( q.contains(n) ){
-//                    System.out.println("break occurred");
-//                    break search;
-//                }
-                if ( cur.id == target ) {
-                    System.out.println("matches: " + cur.id);
-                    return n;
-                }
-                else if (!q.contains(n) && !v.contains(n)) {
-                    System.out.println("q: " + n.id);
+                if (!q.contains(n) && !v.contains(n)) {
+                        System.out.println("q: " + n.id);
                     q.add(n);
                 }
             }
