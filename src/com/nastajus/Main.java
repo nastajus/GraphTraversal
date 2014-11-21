@@ -5,8 +5,8 @@ import java.util.Queue;
 
 public class Main {
 
-    static Queue<Node> q = new LinkedList<Node>(); //q == a queue.
-    static Queue<Node> v = new LinkedList<Node>(); //v == visited.
+    static Queue<Node> q = new LinkedList<Node>(); //q == TO visit.
+    static Queue<Node> v = new LinkedList<Node>(); //v == HAS BEEN visited.
 
     public static void main(String[] args) {
 
@@ -31,9 +31,7 @@ public class Main {
 
             //Node cur = q.poll();
             Node cur = q.remove();
-//            System.out.println("cur: " + cur.id);
             v.add(cur);
-//            System.out.println("v: " + cur.id);
 
             print_Queue();
 
@@ -46,7 +44,6 @@ public class Main {
             for ( Node n : cur.neighbours ){
                 n_count += 1;
                 if (!q.contains(n) && !v.contains(n)) {
-//                    System.out.println("q: " + n.id);
                     q.add(n);
                 }
             }
